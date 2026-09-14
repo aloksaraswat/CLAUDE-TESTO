@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;}
+  .banner{
+    width:1584px;height:396px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 76% 50%, rgba(34,211,238,0.14), transparent 46%),
+      linear-gradient(115deg, #05080f 0%, #0a1120 45%, #0e1a2c 75%, #080f1b 100%);
+    font-family:'Helvetica Neue', Arial, sans-serif;
+  }
+  .grid{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(148,197,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148,197,255,0.05) 1px, transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2) 62%, transparent 88%);
+            mask-image: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2) 62%, transparent 88%);
+  }
+  .net{position:absolute; inset:0;}
+
+  .photo{
+    position:absolute; right:100px; bottom:0;
+    width:430px; height:430px;
+    -webkit-mask-image: radial-gradient(ellipse 48% 52% at 50% 42%, #000 58%, transparent 92%);
+            mask-image: radial-gradient(ellipse 48% 52% at 50% 42%, #000 58%, transparent 92%);
+  }
+  .photo img{
+    width:100%; height:100%; object-fit:cover; object-position:50% 1%;
+    filter: contrast(1.05) brightness(0.95) saturate(0.95);
+  }
+  .photo::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(105deg, rgba(6,10,20,0.55), transparent 45%);
+  }
+
+  .content{position:absolute; left:80px; top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; max-width:820px;}
+  .tag{color:#38e0ff; font-size:15px; font-weight:600; letter-spacing:4.5px; text-transform:uppercase; margin-bottom:18px; display:flex; align-items:center; gap:12px;}
+  .tag .dot{width:7px;height:7px;border-radius:50%;background:#38e0ff;box-shadow:0 0 12px 3px rgba(56,224,255,.75);}
+  .tag .line{width:44px;height:1.5px;background:linear-gradient(90deg,#38e0ff,transparent);}
+  .name{color:#fff; font-size:50px; font-weight:700; letter-spacing:-0.6px; margin:0 0 14px;}
+  .name .accent{color:#38e0ff;}
+  .sub{color:#9db2cc; font-size:19px; letter-spacing:.3px; display:flex; align-items:center; gap:13px;}
+  .sub .sep{color:#35506f;}
+  .rule{position:absolute; left:80px; right:560px; bottom:40px; height:1px; background:linear-gradient(90deg, rgba(56,224,255,.5), transparent);}
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="grid"></div>
+  <svg class="net" width="1584" height="396" viewBox="0 0 1584 396">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38e0ff" stop-opacity=".5"/><stop offset="1" stop-color="#38e0ff" stop-opacity="0"/>
+    </linearGradient></defs>
+    <g stroke="url(#g)" stroke-width="1.1" fill="none">
+      <line x1="830" y1="70" x2="930" y2="130"/><line x1="930" y1="130" x2="905" y2="235"/>
+      <line x1="930" y1="130" x2="1040" y2="100"/><line x1="905" y1="235" x2="1015" y2="290"/>
+      <line x1="1015" y1="290" x2="1040" y2="100"/><line x1="830" y1="330" x2="905" y2="235"/>
+      <line x1="1040" y1="100" x2="1120" y2="60"/><line x1="1015" y1="290" x2="1110" y2="340"/>
+    </g>
+    <g fill="#38e0ff">
+      <circle cx="830" cy="70" r="3" opacity=".75"/><circle cx="930" cy="130" r="3.8" opacity=".95"/>
+      <circle cx="905" cy="235" r="3.3" opacity=".85"/><circle cx="1040" cy="100" r="3.5" opacity=".9"/>
+      <circle cx="1015" cy="290" r="3.2" opacity=".8"/><circle cx="830" cy="330" r="2.5" opacity=".6"/>
+      <circle cx="1120" cy="60" r="2.5" opacity=".6"/><circle cx="1110" cy="340" r="2.5" opacity=".6"/>
+    </g>
+  </svg>
+  <div class="photo"><img src="../../outputs/linkedin/portrait_suit.png"></div>
+  <div class="content">
+    <div class="tag"><span class="dot"></span>AI / ML &nbsp;&middot;&nbsp; MLOps ENGINEER<span class="line"></span></div>
+    <div class="name">Alok Saraswat</div>
+    <div class="sub">Machine Learning <span class="sep">&bull;</span> MLOps <span class="sep">&bull;</span> Production AI Systems</div>
+  </div>
+  <div class="rule"></div>
+</div>
+</body>
+</html>

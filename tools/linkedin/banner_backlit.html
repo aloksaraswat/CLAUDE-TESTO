@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;}
+  .banner{
+    width:1584px;height:396px;position:relative;overflow:hidden;
+    background:linear-gradient(100deg,#000 0%,#07060a 55%,#000 100%);
+    font-family:'Helvetica Neue', Arial, sans-serif;
+  }
+  .photo{position:absolute; right:0; top:50%; transform:translateY(-50%); width:700px; height:960px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 18%, #000 38%);
+            mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.6) 18%, #000 38%);}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;}
+
+  .content{position:absolute; left:82px; top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; max-width:760px;}
+  .tag{color:#f0a94c; font-size:15px; font-weight:600; letter-spacing:4.5px; text-transform:uppercase; margin-bottom:18px; display:flex; align-items:center; gap:12px;}
+  .tag .dot{width:7px;height:7px;border-radius:50%;background:#f0a94c;box-shadow:0 0 12px 3px rgba(240,169,76,.6);}
+  .tag .line{width:44px;height:1.5px;background:linear-gradient(90deg,#f0a94c,transparent);}
+  .name{color:#f7f3ec; font-size:50px; font-weight:700; letter-spacing:-.6px; margin:0 0 14px;}
+  .sub{color:#b6a894; font-size:19px; letter-spacing:.3px; display:flex; align-items:center; gap:13px;}
+  .sub .sep{color:#6b5a45;}
+  .rule{position:absolute; left:82px; right:640px; bottom:42px; height:1px; background:linear-gradient(90deg, rgba(240,169,76,.45), transparent);}
+  .code{position:absolute; left:82px; top:46px; color:#3d3529; font-size:13px; letter-spacing:2px;}
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="photo"><img src="../../outputs/linkedin/portrait_backlit.png"></div>
+  <div class="content">
+    <div class="tag"><span class="dot"></span>AI / ML &nbsp;&middot;&nbsp; MLOps ENGINEER<span class="line"></span></div>
+    <div class="name">Alok Saraswat</div>
+    <div class="sub">Machine Learning <span class="sep">&bull;</span> MLOps <span class="sep">&bull;</span> Production AI Systems</div>
+  </div>
+  <div class="rule"></div>
+</div>
+</body>
+</html>
